@@ -1,10 +1,8 @@
 const Portfolio = () => {
   return (
     <>
-      <div className="portfolio-box">
-        <div className="portfolio-heading" id="portfolio">
-          My Portfolio
-        </div>
+      <div className="portfolio-box" id="portfolio">
+        <div className="portfolio-heading">My Portfolio</div>
         <div className="portfolio-list">
           <a
             href="https://shaileshgontewar.github.io/clockxd/"
@@ -20,7 +18,11 @@ const Portfolio = () => {
           >
             <img src="./image/react-blog.png" alt="" className="project-img" />
           </a>
-          <a href="" target="_blank" rel="noreferrer">
+          <a
+            href="https://react-blogshailesh1.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="./image/todo-app.png" alt="" className="project-img" />
           </a>
           <a
@@ -32,7 +34,7 @@ const Portfolio = () => {
               src="./image/E-commerse-pic.png
                 "
               alt="E-commerce"
-              className="project-img"
+              className="project-img4"
             />
           </a>
         </div>

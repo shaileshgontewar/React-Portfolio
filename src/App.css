@@ -26,13 +26,6 @@ body {
 html {
   font-size: 16px;
 }
-
-/* body .disable-body {
-    height: 100vh;
-    position: fixed;
-    overflow-y: hidden;
-} */
-
 /* * -------------- header ---------------- */
 
 .header {
@@ -48,7 +41,7 @@ html {
 }
 
 .head-name {
-  margin: auto 3rem;
+  margin: auto;
   font-weight: bold;
   font-size: 2rem;
 }
@@ -78,68 +71,44 @@ html {
 
 .side-menu-btn {
   position: fixed;
-  top: 12px;
-  right: 20px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  z-index: 20;
-  color: #105652;
+  top: 0.75rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--white);
   display: none;
 }
 
-.side-menu-btn:hover {
-  color: #115350;
-  background-color: #f0e4ce;
-}
-
 /* mobile view menu */
-
+.hidemenu{
+  display: none ;
+}
 .side-menu {
   height: 100%;
-  width: 0;
+  width: 20rem;
   position: fixed;
   z-index: 25;
-  top: 0;
+  top: 4rem;
   right: 0;
-  z-index: 10;
-  background-color: #ffffff;
-  box-shadow: -32px -10px 99px #00000029;
+  background-color:var(--navbar-color);
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  transition: 0.5s linear;
+  opacity: .8;
 }
 
+
 .side-menu .border-bottom {
-  padding: 8px 8px 20px 32px;
+  padding:1.5rem 5rem;
   text-decoration: none;
   font-size: 18px;
-  color: #135451;
+  color: var(--white);
+  font-weight: bold;
   padding-top: 25px;
   display: block;
   transition: 0.5s;
   border-bottom: 1px solid #ededed;
   border-radius: 5px;
-}
-
-.side-menu .border-bottom:hover {
-  color: #fca738;
-  background-color: #ebebeb;
-}
-
-.side-menu .close-btn {
-  text-decoration: none;
-  position: absolute;
-  top: 10px;
-  color: #125451;
-  right: 20px;
-  font-size: 48px;
-  padding: 0px 15px;
-  border-radius: 30%;
-}
-
-.side-menu .close-btn:hover {
-  color: #105652;
-  background-color: #eeeeee;
+ 
 }
 
 /* * ------------- banner-------- */
@@ -347,7 +316,6 @@ html {
   transform: scale(0.98);
   box-shadow: 1px 1px 30px 2px #fff;
 }
-
 /**--------- Resume ------------------- */
 
 .resume-innerbox {
@@ -358,7 +326,7 @@ html {
   width: 100%;
 }
 .resume-innerbox .box {
-  flex: 1 1 24rem;
+  flex: 1 1 25rem;
 }
 .resume-innerbox .box .education-box {
   height: 8rem;
@@ -371,7 +339,6 @@ html {
 }
 .resume-left {
   margin: auto;
-
 }
 .education {
   font-size: 1.5rem;
@@ -440,7 +407,7 @@ html {
   color: #333333; 
 }
 .contact-innerbox .box {
-  flex: 1 1 20rem;
+  flex: 1 1 25rem;
 }
 .contact-right {
   width: 50%;
@@ -516,18 +483,19 @@ html {
   html {
     font-size: 12px;
   }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .html {
+    font-size: 10px;
+  }
   .menu {
     display: none;
   }
 
   .side-menu-btn {
     display: block;
-  }
-}
-
-@media screen and (max-width: 776px) {
-  .html {
-    font-size: 10px;
   }
 }
 

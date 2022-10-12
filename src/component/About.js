@@ -1,14 +1,12 @@
 const About = () => {
   return (
     <>
-      <div className="about-box">
+      <div className="about-box" id="about">
         <div className="about-img box">
           {/* <img src="./image/about-me-guy.png" alt="" /> */}
         </div>
         <div className="about-text box">
-          <p className="about-me" id="about">
-            About Me
-          </p>
+          <p className="about-me">About Me</p>
           <p>
             I'm a web designer & front-end developer with good experience in
             making front-end projects. I'm interested in all kinds of visual
