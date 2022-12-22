@@ -4,10 +4,13 @@ const Banner = () => {
       <div className="banner">
         <div className="inner-banner">
           <div className="banner-text box">
-            <p className="banner-name">Hi, I am Shailesh Gontewar</p>
-            <p className="banner-developer">A Full-Stack Developer</p>
+            <p className="banner-name">
+              <span>Hi there, my name is</span> Shailesh Gontewar.
+            </p>
+            <p className="banner-developer">Front-End Developer.</p>
             <p className="banner-description">
-              I develop projects and Innovation is my passion .
+              I am a working professional who just started learning coding I
+              have develop projects.
             </p>
             <div className="button">
               <button className="hireme-btn">
@@ -16,15 +19,13 @@ const Banner = () => {
                 </a>
               </button>
               <button className="getresume-btn">
-                <a href="resume" target="_blank">
+                <a href="./shailesh.pdf" download="shailesh.pdf">
                   Get Resume
                 </a>
               </button>
             </div>
           </div>
-          <div className="banner-img box">
-            <img src="./image/shailesh.jpeg" alt="img" width="" height="" />
-          </div>
+          <div className="banner-img box"></div>
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-
+import { NavLink } from "react-router-dom";
 const Header = () => {
   const [show, setShow] = useState(false);
   return (
@@ -9,32 +9,43 @@ const Header = () => {
       <header className="header">
         <div className="head-name">Shailesh Gontewar</div>
         <div className="menu">
-          <a href=".">Home</a>
-          <a href="#about">About</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/project">Project</NavLink>
+            </li>
+            <li>
+              <NavLink to="#"> About</NavLink>
+            </li>
+            <li>
+              <NavLink to="#"> Resume</NavLink>
+            </li>
+          </ul>
         </div>
         <div className="side-menu-btn" onClick={() => setShow(!show)}>
           {show ? <ImCross /> : <FaBars />}
         </div>
       </header>
       <div className={show ? "side-menu " : "hidemenu"} id="side-menu">
-        <a href="." className="border-bottom">
-          Home
-        </a>
-        <a href="#about" className="border-bottom">
-          About
-        </a>
-        <a href="#portfolio" className="border-bottom">
-          Portfolio
-        </a>
-        <a href="#resume" className="border-bottom">
-          Resume
-        </a>
-        <a href="#contact" className="border-bottom">
-          Contact
-        </a>
+        <ul>
+          <li>
+            <NavLink to="/" className="border-bottom">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/project" className="border-bottom">
+              Project
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/" className="border-bottom">
+              About
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </>
   );

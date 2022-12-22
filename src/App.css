@@ -1,67 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Roboto+Mono:ital,wght@1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap");
-
-* {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
 body {
-  background: #f7f7f7;
+  background: #f9f9f9;
   overflow-x: hidden;
 }
 :root {
-  --navbar-color:#150050;
+  --navbar-color: #150050;
   --primary-color: #fbf3e4;
   --black: #333;
   --white: #fff;
   --secondary-color: #fca738;
-  --headerbanner-color: #6F38C5;
+  --headerbanner-color: #6f38c5;
   --primary-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  --primary-button:#3F0071;
+  --primary-button: #3f0071;
 }
 html {
   font-size: 16px;
 }
 /* * -------------- header ---------------- */
 
+.hidemenu {
+  display: none;
+}
 .header {
   width: 100vw;
-  height: 4.5rem;
+  height: 4rem;
   display: flex;
-  background: var(--navbar-color);
+  background: var(--headerbanner-color);
   position: sticky;
   top: 0px;
   z-index: 5;
   justify-content: space-between;
   color: #fff;
 }
-
 .head-name {
-  margin: auto;
+  margin: 1rem;
   font-weight: bold;
   font-size: 2rem;
 }
-
-.menu {
+.menu ul {
   display: flex;
   margin: auto 2rem;
   align-items: center;
   justify-content: space-between;
 }
-
-.menu a {
+.menu ul li {
+  margin: 1.5rem;
+}
+.menu ul li a {
   font-size: 1.2rem;
   font-weight: 500;
   color: #fff;
   transition: all 0.3s ease-out;
-  margin: 1.5rem;
   text-transform: uppercase;
 }
-
 .menu a:hover {
   color: #fca738;
   transform: scale(1.1);
@@ -80,9 +70,7 @@ html {
 }
 
 /* mobile view menu */
-.hidemenu{
-  display: none ;
-}
+
 .side-menu {
   height: 100%;
   width: 20rem;
@@ -90,16 +78,13 @@ html {
   z-index: 25;
   top: 4rem;
   right: 0;
-  background-color:var(--navbar-color);
+  background-color: var(--headerbanner-color);
   overflow-x: hidden;
   transition: 0.5s linear;
-  opacity: .8;
+  opacity: 0.6;
 }
-
-
 .side-menu .border-bottom {
-  padding:1.5rem 5rem;
-  text-decoration: none;
+  padding: 1.5rem 5rem;
   font-size: 18px;
   color: var(--white);
   font-weight: bold;
@@ -108,14 +93,13 @@ html {
   transition: 0.5s;
   border-bottom: 1px solid #ededed;
   border-radius: 5px;
- 
 }
 
 /* * ------------- banner-------- */
 
 .banner {
   width: 90%;
-  background-color: var(--headerbanner-color);
+  background-color: #fff;
   margin: 2rem auto;
   border-bottom-right-radius: 8rem;
   border-top-left-radius: 8rem;
@@ -135,33 +119,31 @@ html {
   flex-direction: column;
 }
 .banner-text p {
-  margin: 0.8rem;
+  margin: 0.5rem;
 }
 .banner-name {
-  color: #fca738;
   font-size: 2.5rem;
+  color: #FF9E9E;
+}
+.banner-name span{
+  font-size: 2rem;
+  color: #B2B2B2;
 }
 .banner-developer {
-  color: white;
-  font-weight: bold;
   font-size: 2rem;
 }
-
 .banner-description {
-  color: #fbf3e4;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .button {
-  margin: auto;
+  margin: 1rem auto;
   display: flex;
   gap: 4rem;
   justify-content: center;
 }
 .button button {
-  border: none;
   width: 8rem;
-  padding: 12px;
-  text-align: center;
+  padding: 0.7rem;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -171,61 +153,52 @@ html {
   font-weight: 500;
   font-size: 1rem;
 }
-
 .hireme-btn {
-  background-color: var(--primary-button);
-  box-shadow: 0px 16px 29px #475ac769;
-  opacity: 0.99;
+  background-color: #a555ec;
+  box-shadow: 0px 1px 1rem #fff;
   transition: all 0.3s ease-out;
 }
-
 .getresume-btn {
-  background-color:var(--primary-button);
-  box-shadow: 0px 16px 29px #475ac769;
+  border: 1px solid var(--primary-button);
+  background-color: #fff;
   transition: all 0.3s ease-out;
 }
-
+.getresume-btn a {
+  color: var(--primary-button);
+}
 .hireme-btn:hover,
 .getresume-btn:hover {
   transform: scale(1.1);
 }
 
-.banner-img {
-  margin: auto;
-}
-.banner-img img {
-  width: 25rem;
-  border-radius: 50%;
-  border: 20px solid #7e5cb4;
-}
-
 /* ****************  About me  ****************************/
-
 .about-box {
   width: 90%;
   margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  background-color: var(--headerbanner-color);
+  background-color: var(--white);
   border-radius: 1.25rem;
   box-shadow: 0.1rem 0.1rem 3.6rem #10565221;
-  color: var(--white);
+  color: var(--black);
 }
 .about-box .box {
   flex: 1 1 25rem;
 }
-.about-img {
+.about {
   margin: auto;
 }
-.about-img img {
-  object-fit: cover;
+.about button {
   width: 80%;
-  height: auto;
+  background-color: var(--headerbanner-color);
+  height: 2rem;
+}
+.about button a{
+  color: #fff;
 }
 .about-text {
   font-size: 1rem;
-  color: var(--white);
+  color: var(--black);
   line-height: 1.5;
   margin: auto 0.5rem;
 }
@@ -234,12 +207,8 @@ html {
 .portfolio-heading,
 .resume-heading,
 .contact-heading {
-  color: var(--white);
-  display: inline-block;
   font-size: 2.2rem;
   font-weight: bold;
-  padding: 0.2rem;
-  border-bottom: 0.2rem solid #fff;
   margin: 1.25rem 0rem;
   text-transform: capitalize;
 }
@@ -281,40 +250,58 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--headerbanner-color);
   width: 90%;
   margin: auto;
-  margin-bottom: 5rem;
-  border-radius: 2rem;
+  margin-top: 3rem;
+  border-radius: 1rem;
 }
 
 .portfolio-heading {
-  margin: 1.2rem  3rem;
+  margin: 1.2rem auto;
+  color: gray;
 }
-
+.portfolio-heading span {
+  font-weight: bold;
+  color: var(--navbar-color);
+}
 .portfolio-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 90%;
+  width: 80%;
 }
-
-.portfolio-list a {
-  flex: 1 1 25rem;
-  margin: 10px;
+.portfolio-list > div {
+  margin-top: 2rem;
+  border-bottom: 1px solid gray;
 }
-
-.portfolio-list a img {
-  width: 100%;
-  box-shadow: 0.5rem 0.5rem .6rem var(--headerbanner-color);
-  transition: all 0.5s ease-out;
+.project-information h2 {
+  margin-bottom: 1rem;
+}
+.porject-btn button {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+}
+.porject-btn button a {
+  color: #fff;
+}
+.live-btn {
+  background-color: var(--headerbanner-color);
+}
+.view-btn {
+  background-color: transparent;
+  border: 1px solid blueviolet;
+}
+.porject-btn .view-btn {
+  color: blueviolet;
+}
+.portfolio-list div img {
+  width: 20rem;
   cursor: pointer;
   border-radius: 5px;
+  object-fit: contain;
 }
 
-.portfolio-list a img:hover {
+.porject-btn button:hover {
   transform: scale(0.98);
-  box-shadow: 1px 1px 30px 2px #fff;
+  box-shadow: 1px 1px 1rem 1px blueviolet;
+  cursor: pointer;
 }
 /**--------- Resume ------------------- */
 
@@ -329,12 +316,10 @@ html {
   flex: 1 1 25rem;
 }
 .resume-innerbox .box .education-box {
-  height: 8rem;
+  height: 10rem;
   margin: 1rem;
   position: relative;
-  border-bottom: 0.5rem solid rgb(218, 218, 231);
-  border-right: 0.5rem solid rgb(218, 218, 231) ;
-  border-left: .2rem solid var(--navbar-color);
+  border-left: 0.2rem solid var(--navbar-color);
   background-color: var(--white);
 }
 .resume-left {
@@ -344,24 +329,20 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.6rem;
-  color: var(--white);
 }
-
-.education-details {
+.college-name {
   font-size: 1.25rem;
   font-weight: 500;
   margin: 1rem 2rem;
 }
-
-.marks {
+.degree {
   font-size: 1rem;
   font-weight: bold;
   margin-left: 2rem;
 }
-
 .resume-left span {
   color: white;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: bold;
   background-color: var(--primary-button);
   border-radius: 0.9rem;
@@ -374,12 +355,14 @@ html {
 .circle {
   position: absolute;
   font-size: 4rem;
-  color:var(--navbar-color);
+  color: var(--navbar-color);
 }
 
-.c-1 ,.c-2 ,.c-3{
-    top: -2rem;
-    left: -0.8rem;
+.c-1,
+.c-2,
+.c-3 {
+  top: -2.6rem;
+  left: -0.9rem;
 }
 .resume-right {
   background-color: white;
@@ -389,13 +372,8 @@ html {
 /* * ----------- Contact Me  -------------- */
 
 .contact-heading {
-  margin: 20px auto;
+  margin: 1rem auto;
 }
-.contact-box {
-  margin: auto;
-  background-color:var(--headerbanner-color);
-}
-
 .contact-innerbox {
   width: 85%;
   border-radius: 0.5rem;
@@ -404,54 +382,45 @@ html {
   align-items: center;
   flex-wrap: wrap;
   font-size: 1rem;
-  color: #333333; 
+  color: #333333;
 }
 .contact-innerbox .box {
   flex: 1 1 25rem;
 }
 .contact-right {
   width: 50%;
-  padding:2.5rem;
-  background-color:var(--white);
+  padding: 2.5rem;
+  background-color: var(--white);
   margin: 1rem;
 }
 
 .lets-connect,
 .send-msg {
   font-size: 1.5rem;
-  color: #105652;
   font-weight: bold;
   margin: 1.25rem;
 }
-.send-msg {
-  margin-left: 2.5rem;
-}
-
-.contact-right form {
-  margin-left: 2.5rem;
-}
-
 .contact-right form input {
-  width: 90%;
+  width: 100%;
   height: 2.5rem;
-  margin: 0.4rem 0rem 1rem;
-  border: 1px solid #e0e0e0;
+  margin: 0.1rem 0rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  outline: none;
 }
 
 .contact-right form textarea {
-  width: 90%;
-  margin: 0.3125rem 0px 1.25rem;
+  width: 100%;
+  margin: 1rem 0rem;
   border: 1px solid #e0e0e0;
 }
 
 .submit-btn {
-  width: 30%;
   background-color: var(--primary-button);
   color: white;
   font-weight: bold;
   font-size: 1rem;
-  border-radius: 0.25rem;
-  margin-top: 0.625rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
   border: none;
   cursor: pointer;
 }
@@ -464,26 +433,31 @@ html {
 /**- ----------- ------ Footer  -------------------*/
 
 .footer {
+  width: 100%;
+  height: 5rem;
   color: var(--white);
-  background-color: var(--navbar-color);
-  font-size: 1rem;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 6rem;
+  background-color: var(--headerbanner-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+.footer .follow span {
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 /* ** ----------my Responsivenese ---------------*/
-@media screen and (max-width: 1200px){
-  html{
+@media screen and (max-width: 1200px) {
+  html {
     font-size: 14px;
   }
-  
 }
 
 @media screen and (max-width: 1024px) {
   html {
     font-size: 12px;
   }
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -504,7 +478,6 @@ html {
     font-size: 8px;
   }
 }
-
 
 /* 
 1200 px

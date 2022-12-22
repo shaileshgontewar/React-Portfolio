@@ -1,22 +1,24 @@
 import "./App.css";
-import About from "./component/About";
-import Banner from "./component/Banner";
-import Contect from "./component/Contect";
 import Header from "./component/Header";
-import Portfolio from "./component/Portfolio";
-import Resume from "./component/Resume";
+import Portfolio from "./component/pages/Portfolio";
 import Footer from "./component/Footer";
+import ProjectStore from "./component/Api/Store";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./component/Home";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Banner />
-      <About />
-      <Portfolio />
-      <Resume />
-      <Contect />
-      <Footer />
+      <ProjectStore>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="project" element={<Portfolio />}></Route>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </ProjectStore>
     </div>
   );
 }
